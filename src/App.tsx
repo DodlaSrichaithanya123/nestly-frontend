@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import HomePage from "./pages/HomePage";
 import RoomListing from "./pages/RoomListing";
 import RoomDetails from "./pages/RoomDetails";
@@ -11,20 +11,6 @@ import MyBookingsPage from "./pages/MyBookingsPage";
 import ProfileScreen from "./pages/ProfileScreen";
 import AddRoom from "./pages/AddRoom";
 import ForgotPassword from "./pages/ForgotPassword";
-
-function NextPage() {
-  return (
-    <motion.div
-      className="h-screen flex items-center justify-center"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <h1 className="text-3xl font-bold">This is the Next Screen</h1>
-    </motion.div>
-  );
-}
 
 // Wrapper component to enable AnimatePresence
 function AnimatedRoutes() {
